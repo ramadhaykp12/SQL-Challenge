@@ -3,3 +3,9 @@ from employee_information e
 JOIN last_quarter_bonus l
 on e.employee_ID = l.employee_ID
 where l.bonus >= 5000 and e.division = "HR";
+
+select t.stock_code 
+from price_today t
+INNER JOIN price_tomorrow p 
+ON t.stock_code  = p.stock_code 
+WHERE p.price > t.price;
